@@ -187,13 +187,13 @@ function getValues(){
     <p>Contiene los siguientes sellos</p>
         <div class="sellos">
         ${trueStamps.map((trueStamp) =>
-         `<img src='/images/${trueStamp}.png' class='sello'>`
+         `<img src='images/${trueStamp}.png' class='sello'>`
        ).join('')}
         </div>
     <p>Contiene las siguientes leyendas</p>
         <div class="leyendas">
         ${trueLeyends.map((trueLeyend) =>
-        `<img src="/images/${trueLeyend}.png" class='leyenda'>`
+        `<img src="images/${trueLeyend}.png" class='leyenda'>`
          ).join('')}
         </div>
 </div>`
