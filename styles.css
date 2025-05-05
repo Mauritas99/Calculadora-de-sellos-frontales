@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+:root {
+    --var-primary-color: #F7F7F7;
+    --var-secondary-color:#333333;
+    --var-third-color: #F1F1F1;
+    --var-quarter-color: #335c85;
+}
+
+body {
+    background-color: var(--var-primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    margin: 0;
+}
+  /* body::before{
+    content: "";
+    background-image: url("https://infoalimentos.org.ar/images/temas_22/etiquetado/etiquetado_sellos_juntos.jpg"); 
+    filter: blur(10px); 
+    background-size: contain;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180%;
+    z-index: -1; 
+  }   */
+
+header {
+    background-color: var(--var-secondary-color);
+    border-bottom: 2px solid #040D12;
+    width: 100%;
+    height: 160px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    padding: 20px 0 40px 0;
+    color: #eee;
+    letter-spacing: 2px;
+    font-size: 3rem;
+}
+h4{
+    color: #eee;
+}
+input {
+    font-size: 17px;
+    height: auto;
+    width: 150px;
+    background-color: #EEE;
+    color: var(--var-secondary-color);
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    cursor:auto;
+    transition: all 0.1s ease;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+select {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px;
+    border: 2px solid gray;
+    background-color: #eee;
+    color: var(--var-secondary-color);
+    border-radius: 5px;
+    width: 150px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+select:focus {
+    outline: none;
+    border: 2px solid #000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    margin-top: 20px;
+    position: absolute;
+    top: 88%;
+    left: 80.5%;
+    background-color: var(--var-third-color);
+    color: var(--var-secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s ease-out;
+}
+button:disabled{
+    color: #ccc;
+    transform: translateY(0px);
+}
+button:hover {
+    color: var(--var-secondary-color);
+}
+
+th {
+    color: #333333;;
+    padding-bottom: 10px;
+}
+
+td {
+    padding-top: 10px;
+    color: #333333;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+tbody > tr{
+    height: 55px;
+}
+footer {
+    background-color: var(--var-secondary-color);
+    border-top: 2px solid #040D12;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ddd;
+}
+.main-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.container {
+    background-color: var(--var-secondary-color);
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    height: 850px;
+    width: 600px;
+    margin-left: 10px;
+}
+.container-2{
+    background-color: #F1F1F1;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    height: 450px;
+    width: 400px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.container-2 > p{
+    letter-spacing: 1.5px;
+}
+.producto {
+    background-color: var(--var-third-color);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.producto .cantidad>select {
+    width: 72px;
+    position: absolute;
+    height: auto;
+    left: 160px;
+}
+
+.alimento {
+    height: 60px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cantidad {
+    height: 60px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    left: 50px;
+    position: relative;
+}
+.tabla-nutrientes {
+    background-color: var(--var-third-color);
+    display: flex;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 25px;
+    height: 450px;
+}
+
+.table {
+    width: 100%;
+    height: 100%;
+    display: relative;
+}
+.alerta{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 180px;
+    padding: 5px;
+    border-radius: 10px ;
+    background-color: #CF0A0A;
+    color: var(--var-primary-color);
+    left: 150px;
+    top: 24%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    transform: translatex(20%);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+.alerta.active{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-in;
+}
+.nutrientes>input {
+    margin: 5px;
+}
+.disabled{
+    background-color:#9E9FA5;
+    cursor: no-drop;
+    transform: scale(0.95);
+    transition: all 0.3s ease-in;
+}
+.error{
+    border: 2px solid #CF0A0A;
+    transition: border 0.2s ease-in;
+}
+.error:focus{
+    border: 2px solid #CF0A0A;
+}
+.disabled:hover{
+    background-color: #9E9FA5;
+}
+.clear-button{
+    background-color: #C63D2F;
+    color: var(--var-primary-color);
+    top: 88%;
+    left: 65%;
+    transform: translateY(0px);
+    transition: translateY 0.2s;
+    border: none;
+}
+.clear-button:hover{
+    background-color: #A73121;
+    border: none;
+    transform: translateY(1px);
+    transition: translateY 0.2s;
+    color: var(--var-primary-color);
+}
+/* Mensaje de resultados */
+
+.close-button{
+    background-color: var(--var-third-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    color: #000;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    top: -10px;
+    left: 95%;
+}
+.mensaje{
+    margin: 40px;
+    height: 600px;
+    width: 800px;
+    border-radius: 10px;
+    background-color: var(--var-secondary-color);
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+.mensaje.active{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+.mensaje-container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 70%;
+    width: 85%;
+    left: 8%;
+    top: 23%;
+    border-radius: 7px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--var-third-color);
+}
+.mensaje > h4{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 10px ;
+}
+.mensaje > hr{
+    width: 95%;
+    border-color: #111;
+}
+.mensaje-container > p{
+    position: absolute;
+    font-size: 1.1rem;
+    font-weight: 500;
+    top: 3%;
+}
+.mensaje-container > p:last-of-type{
+    top: 55%;
+    color: #111;
+}
+.sellos{
+    display: flex;
+    background-color: #ecf0f1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    height: 145px;
+    width: 620px;
+    margin: 30px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 12%;
+}
+.sello{
+    height: 110px;
+    width: 110px;
+    margin: 0 5px;
+}
+.leyendas{
+    display: flex;
+    background-color: #ecf0f1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    height: 100px;
+    width: 620px;
+    margin: 30px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 63%;
+    left: 0;
+}
+.leyenda{
+    height: 60%;
+    width: 40%;
+    margin: 0 5px;
+}
+/* Animaciones */
+
+.transition-class {
+    opacity: 0; /* El elemento estará oculto al principio */
+    transform: translateY(20px); /* Puedes ajustar la animación de entrada aquí */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Define la transición aquí */
+  }
+  
+  .transition-class.active {
+    opacity: 1; /* El elemento será visible después de agregar la clase 'active' */
+    transform: translateY(0); /* Restablece la posición a su valor original */
+  }
+  .transition-class.leave {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+  

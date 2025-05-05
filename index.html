@@ -1,0 +1,109 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcuLab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/calculadora.png" type="image/svg+xml">
+   
+      
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Sellos</h1>
+    </header>
+    <div class="main-container">
+        <div class="container">
+            <div class="producto">
+                <div class="alimento">
+                    <select name="tipo-alimento" id="tipo-alimento">
+                        <option>Alimento</option>
+                        <option>Bebida Analcohólica</option>
+                    </select>
+                    <input type="text" class="nombre-alimento" placeholder='Descripción' id='nombre-alimento'>
+                </div>
+                <div class="cantidad">
+                    <input type="number" step=hidden class="gramos" placeholder='Cantidad' id='cantidad' min='0' max='1000'>
+                    <select name="tipo-unidad" id="tipo-unidad">
+                        <option>g</option>
+                        <option>ml</option>
+                    </select>
+                </div>
+            </div>
+            <form class="tabla-nutrientes">
+                
+                <table class='table'>
+                    <thead>
+                        <tr>
+                            <th width='130'>Nutriente</th>
+                            <th width='130'>Porcion</th>
+                            <th width='130'>Unidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Calorias:</td>
+                            <td><input type="text" placeholder='Calorías' id='calorias' required></td>
+                            <td>Kcal</td>
+                        </tr>
+                        <tr>
+                            <td>Azúcares Añadidos:</td>
+                            <td>
+                                <input type="text" placeholder='Azúcares añadidos' id='azucares' required>
+                            </td>
+                            <td>g</td>
+                        </tr>
+                        <tr>
+                            <td>Grasas Totales:</td>
+                            <td><input type="text" placeholder='Grasas Totales' id='grasas-totales' required></td>
+                            <td>g</td>
+                        </tr>
+                        <tr>
+                            <td>Grasas Saturadas:</td>
+                            <td> <input type="text" placeholder='Grasas Saturadas' id='grasas-saturadas' required></td>
+                            <td>g</td>
+                        </tr>
+                        <tr>
+                            <td>Sodio:</td>
+                            <td><input type="text" placeholder='Sodio' id='sodio' required></td>
+                            <td>mg</td>
+                        </tr>
+                        <tr>
+                            <td><label>¿Contiene Edulcorante?</label></td>
+                            <td> <select name="leyenda-edulcorante" id="leyenda-edulcorante">
+                                <option>NO</option>
+                                <option>SI</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label>¿Contiene Cafeína?</label></td>
+                            <td>   
+                                <select name="leyenda-cafeina" id="leyenda-cafeina">
+                                    <option>NO</option>
+                                    <option>SI</option>
+                                </select></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type='submit' id='button'>Calcular</button>
+                <button type='submit' class="clear-button"id='clear-button'>Borrar</button>
+            </form>
+         </div>
+         <div class="container-2">
+            <h2>¿Como usar la calculadora?</h2>
+            <p> Dentro del primer cuadro, ingresá los datos referidos al <strong>Alimento</strong> (tipo de alimento, nombre del mismo, cantidad por porción y la unidad correspondiente)
+            <br>
+            <br>
+            <hr width='120'>
+            <br>
+            <p>En el segundo cuadro, ingresá la información referida al contenido de nutrientes críticos para esa porción (calorías, azúcares <strong>añadidos</strong>, grasas totales, grasas saturadas, sodio)</p>
+          </p>
+         </div>
+    </div>
+    <footer>
+        <p style='font-weight: bold;'>Mauro Gómez, 2023 ®</p>
+    </footer>
+<script src="app.js"></script>
+</body>
+</html>
